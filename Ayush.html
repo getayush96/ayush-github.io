@@ -1,0 +1,159 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="csst.css">
+		
+	</head>
+	<body>
+	<div id="fb">
+		<a href="https://www.facebook.com/profile.php?id=100009546734149">
+			<img src="fb.gif" height="60px" >
+		</a>
+	</div>
+	<p id="hello">ayush</p>
+		<div id="navbar">
+			
+			<div id="introtext">
+				<p class="centerline">Welcome To the Home Page Of:</p>
+				<br><br><br>
+				<p class="centerline">AYUSH MAHESHWARI</p>
+				<br><br><br>
+				<p class="centerline" style="font-size:20px">Use the navigation bar at the top</p>
+			</div>
+			<div id="tab1">
+			HOME
+			</div>
+			<div id="tab2">
+			ABOUT ME
+			</div>
+			<a href="#feed" class="free">
+				<div id="etab1"> 
+				FEEDBACK
+				</div>
+			</a>
+			<div id="tab3">
+				
+				<div id="dropdown">
+					<p style="padding:10px;">
+					Ayush Maheshwari  
+					<br>
+					AF-045
+					<br>
+					Rajendra Bhawan
+					<br>
+					IIT ROORKEE
+					<br>
+					E-mail:<br>getayush96@gmail.com
+					<br>
+					Mob:7042718281
+					</p>
+					
+				</div>
+			CONTACT ME
+			
+			</div>
+		</div>
+			
+		<div class="befbody">
+			
+			<div id="imagecover">
+			
+			</div>
+		</div>
+		
+		<div id="feedback">
+		
+		<form id="formfill" action="#feed">
+			
+				<p id="feedheading">|| FEEDBACK ||</p>
+			
+			<input type="text" value="NAME" class="forminput" onfocus="focusing(this)" size="37" onfocusout="checkname(this)"></input>
+			
+			<br><br>
+			<input type="text" value="PHONE NUMBER" class="forminput" onclick="focusing(this)" onfocusout="checkphn(this)" size="37" ></input>
+			<br><br>
+			<select class="forminput" onfocus="focusing(this)" onfocusout="checkfeedtype(this)">
+				<option selected>-SELECT THE TYPE OF YOUR FEEDBACK-</option>
+				<option >REVIEW</option>
+				<option >COMPLAINT</option>
+			</select>
+			<br><br>
+			<a name="feed"></a>
+			<textarea  class="forminput" onfocus="focusing(this)" onfocusout="checkfeed(this)" rows="20" cols="39" > YOUR FEEDBACK HERE PLEASE</textarea>
+			<br><br>
+			<button onclick="checkall()">SUBMIT</button>
+		</form>
+		
+		<script>
+			function checkname(ptr)
+			{
+			
+			ptr.style.border='0px outset #1fbed6';
+			if(ptr.value.length<=3 || ptr.value=="NAME")
+				{
+				ptr.style.border='3px outset red';
+				
+				}
+			else
+				{
+				ptr.style.border='3px outset green';}
+			
+			}
+			function checkphn(ptr)
+			{
+			
+			ptr.style.border='0px outset #1fbed6';
+			if(ptr.value.length!=10 || isNaN(ptr.value))
+				{
+				ptr.style.border='3px outset red';
+				
+				}
+			else
+				{
+				ptr.style.border='3px outset green';}
+			
+			}
+			 
+			function focusing(ptr)
+			{
+			
+			ptr.value='';
+			ptr.style.border='3px outset #ff9900';
+			}
+			function checkfeedtype(ptr)
+			{
+				if(ptr.value!="REVIEW" && ptr.value!="COMPLAINT")
+				{
+					ptr.style.border='3px outset red';
+				}
+				else
+				{
+					ptr.style.border='3px outset green'
+				}
+			}
+			
+			function checkfeed(ptr)
+			{
+			
+			ptr.style.border='0px outset #1fbed6';
+			if(ptr.value.length<=4 || ptr.value==" YOUR FEEDBACK HERE PLEASE")
+				{
+				ptr.style.border='3px outset red';
+				
+				}
+			else
+				{
+				ptr.style.border='3px outset green';}
+			
+			}
+			
+			function checkall()
+			{
+				checkname(document.getElementsByClassName('forminput')[0]);
+				checkphn(document.getElementsByClassName('forminput')[1]);
+				checkfeedtype(document.getElementsByClassName('forminput')[2]);
+				checkfeed(document.getElementsByClassName('forminput')[3]);
+			}
+		</script>
+	</body>
+</html>
